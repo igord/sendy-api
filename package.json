@@ -1,0 +1,17 @@
+{
+  "name": "sendy-api",
+  "version": "0.0.1",
+  "description": "sendy api for node",
+  "keywords": "sendy aws SES bulk email",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igord/sendy-api.git"
+  },
+  "homepage": "https://github.com/igord/sendy-api.git",
+  "bugs": "https://github.com/igord/sendy-api/issues",
+  "license": "MIT",
+  "author": "Igor Dimitrijevic",
+  "dependencies": {
+    "request": "2.34.0"
+  }
+}

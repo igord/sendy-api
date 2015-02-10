@@ -80,8 +80,8 @@ var params = {
     from_email: 'email@example.com',
     reply_to: 'email@example.com',
     subject: 'Your Subject',
-    plain_text: 'Campaign plain text'  // optional
-    html_text: '<h1>Campaign html</h1>',
+    plain_text: 'Campaign text'  // optional
+    html_text: '<h1>Campaign text</h1>',
     send_campaign: 'true' // optional, set to false if you just want to create a draft campaign
     list_ids: 'your_list_id' // seperate multiple lists with a comma. Only required if send_campaign parameter is true
     brand_id: 'your_brand_id' // only required if send_campaign parameter is false

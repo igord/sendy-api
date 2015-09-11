@@ -69,7 +69,7 @@ prty = {
 	    });
 	}
     },
-		createCampaign: function(o,cb) {
+	createCampaign: function(o,cb) {
 	if (!o.from_name) cb(new Error('Missing "from_name" parameter'), null);
 	if (!o.from_email) cb(new Error('Missing "from_email" parameter'), null);
 	if (!o.reply_to) cb(new Error('Missing "reply_to" parameter'), null);
@@ -77,24 +77,24 @@ prty = {
 	if (!o.html_text) cb(new Error('Missing "html_text" parameter'), null);
 	if (o.send_campaign) {
 		o.send_campign = 1;
-		if (!o.lists_ids) cb(new Error('Missing "list_ids" parameter'));
+		if (!o.list_ids) cb(new Error('Missing "list_ids" parameter'));
 	}
 	if (!o.send_campign) {
 		o.send_campign = 0;
 		if(!o.brand_id) cb(new Error('Missing "brand_id" parameter'));
-	}
+	} 
 	else {
 		o.api_key = this.apiKey;
 		this.request('api/campaigns/create.php', o, function(err,response,body){
-	if (err) cb(err,null);
-	else {
-		var success = ['Campaign created','Campaign created and now sending'];
-		if (success.indexOf(body) === -1) cb(new Error(body), null);
-		else cb(null,body);
-	}
+		if (err) cb(err,null);
+		else {
+			var success = ['Campaign created','Campaign created and now sending'];
+			if (success.indexOf(body) === -1) cb(new Error(body), null);
+			else cb(null,body);
+		}
 		});
 	}
-		},
+	},
 
     request: function(path, params, cb) {
 	params.boolean = true;
@@ -109,6 +109,7 @@ prty = {
 	    
     }
 };
+
 for (var k in prty) module.exports.prototype[k] = prty[k];
 
 

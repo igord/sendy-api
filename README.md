@@ -1,7 +1,7 @@
 sendy-api
 =========
 
-node.js module for Sendy API - [http://sendy.co/api] (http://sendy.co/api)
+node.js module for Sendy API - [http://sendy.co/api](http://sendy.co/api)
 
 ## Example:
 

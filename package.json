@@ -16,6 +16,6 @@
   "license": "MIT",
   "author": "Igor Dimitrijevic",
   "dependencies": {
-    "request": "2.34.0"
+    "request": "2.88.0"
   }
 }
